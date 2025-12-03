@@ -33,6 +33,7 @@ public class Dish {
 	
 	@ManyToOne(optional = false)
 	@JoinColumn(name = "restaurant_id")
+	@JsonIgnore  
 	private Restaurant restaurant;
 
 	public Long getId() { return id; }

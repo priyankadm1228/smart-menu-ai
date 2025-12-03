@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Menu AI - Restaurants & Dishes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Smart Menu AI</h1>
+
+  <!-- Add Restaurant Form -->
+  <div class="panel" style="max-width: 500px; margin: auto;">
+    <h2>Add Restaurant</h2>
+    <form id="restaurant-form">
+      <label>Name:</label>
+      <input type="text" id="restaurant-name" required>
+
+      <label>Location:</label>
+      <input type="text" id="restaurant-location" required>
+
+      <button type="submit">Create Restaurant</button>
+    </form>
+  </div>
+
+  <hr>
+
+  <!-- 2-Panel Layout -->
+  <div class="container">
+
+    <!-- Left Panel: Restaurants -->
+    <div class="panel">
+        <h2>Restaurants</h2>
+      
+        <label>
+          Search:
+          <input type="text" id="restaurant-search" placeholder="Type to filter...">
+        </label>
+      
+        <button id="load-btn" style="margin-top:10px;">Reload Restaurants</button>
+      
+        <ul id="restaurants-list"></ul>
+      </div>
+      
+
+    <!-- Right Panel: Dishes -->
+    <div class="panel">
+      <h2 id="dishes-title">Dishes (select a restaurant)</h2>
+
+      <ul id="dishes-list"></ul>
+
+      <div id="dish-form-wrapper" style="display:none;">
+        <h3>Add Dish</h3>
+        <form id="dish-form">
+          <label>Dish Name:</label>
+          <input type="text" id="dish-name" required>
+
+          <label>Price:</label>
+          <input type="number" id="dish-price" step="0.01" required>
+
+          <label>Description:</label>
+          <input type="text" id="dish-description">
+
+          <button type="submit">Create Dish</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <pre id="debug"></pre>
+
+  <script src="script.js"></script>
+</body>
+</html>
